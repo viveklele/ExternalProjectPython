@@ -1,10 +1,11 @@
 from pytube import YouTube
-link = input("Enter link: ")
-video = YouTube(link)
-stream = video.streams.get_by_resolution("1080p")
-print("Download inprogress...")
-stream.download()
-print("Download complete")
 
+enter_link = input('enter YouTube link: ')
 
+streme = YouTube(enter_link, ).streams.get_highest_resolution()
 
+print('downloading...')
+
+streme.download()
+
+print('download complete')
